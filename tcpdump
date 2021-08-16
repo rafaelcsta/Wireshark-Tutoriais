@@ -1,0 +1,58 @@
+#tcpdump
+
+tcpdump -v -i wlan0
+
+-v verbose
+-w grava saida em um arquivo .pcap (usar .pcap no final do arquivo)
+
+#filtrar por protocolo
+tcpdump -v -i wlan0 icmp
+
+#capturar com filtro e gravar num arquivo
+tcpdump -v -i wlan0 icmp -w icmp.pcap
+
+#abrir arquivo com tcpdump
+tcpdump -v -r icmp.pcap
+
+
+tcpdump -vnr icmp.pcap
+
+-r read
+-v verbose
+-n nao resolve nomes (mostra end ips)
+
+tcpdump -vnr file.pcap $filter
+
+tcpdump -vnr file.pcap host 127.0.0.1
+
+tcpdump -vnr file.pcap host 127.0.0.1 and 10.0.0.1
+
+tcpdump -vnr file.pcap src host 127.0.0.1 and dst host 10.0.0.1
+
+tcpdump -vnr file.pcap
+
+-A caracteres em ascii
+
+tcpdump -vnAr file.pcap
+
+-X hex
+
+tcpdump -vnXr file.pcap
+
+#busca por strings
+
+tcpdump -vnAr file.pcap | grep "$palavra"
+
+#mostra ips filtrando com cut a coluna 5
+tcpdump -vnr file.pcap | cut -d " " -f5
+
+#tira o ttl  com grep -v
+tcpdump -vnr file.pcap | cut -d " " -f5 | grep -v "ttl"
+
+#remove os duplicados com sort -u
+tcpdump -vnr file.pcap | cut -d " " -f5 | grep -v "ttl" | sort -u
+
+
+
+
+
