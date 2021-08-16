@@ -1,0 +1,7 @@
+airdecap-ng -e "Lucas M" -p 68486987 Lucas_M-E4:18:6B:4F:40:7C.cap
+
+ele te dara um arquivo -dec
+
+chmod 777 "Lucas_M-E4:18:6B:4F:40:7C-dec.cap"
+
+dai voce abre-o com wiresharke

